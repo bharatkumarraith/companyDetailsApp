@@ -1,0 +1,13 @@
+var express = require('express');
+
+var employeeController = require('../src/employee/employeeController');
+
+const router = express.Router();
+
+router.route('/user/login').post(employeeController.loginUserControllerFn);
+router.route('/user/create').post(employeeController.createEmployeeControllerFn);
+router.route('/user/all').get(employeeController.getAllEmployeesControllerFn);
+router.route('/user/delete/:id').delete(employeeController.deleteEmployeeControllerFn);
+
+
+module.exports=router;

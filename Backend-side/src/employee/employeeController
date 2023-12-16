@@ -1,0 +1,76 @@
+var employeeService = require('./employeeService');
+
+var createEmployeeControllerFn = async(req,res)=>{
+    try{
+        console.log(req.body);
+        var status= await employeeService.createEmployeeDBService(req.body);
+        console.log(status);
+        if(status)
+        {
+            res.send({'status':true,"message":"user created sucessfully"});
+        }
+        else{
+            res.send({'status':false,"message":"error"});
+        }
+    }
+
+    catch(err)
+    {
+        console.log(err);
+    }
+}
+
+
+
+var loginUserControllerFn = async(req,res)=>{
+    var result = null;
+
+    try{
+        result=await employeeService.loginEmployeeDBService(req.body);
+        if(result.status)
+        {
+            res.send({'status':true,"message":result.msg});
+        }
+        else{
+            res.send({"status":false,"message":result.msg})
+        }
+    }
+
+    catch(error)
+    {
+        console.log(error)
+        res.send({"status":false,"message":error.msg});
+    }
+}
+
+const getAllEmployeesControllerFn = async (req, res) => {
+    try {
+        const result = await employeeService.getAllEmployeesDBService();
+
+        if (result.status) {
+            res.send({ status: true, employees: result.employees });
+        } else {
+            res.send({ status: false, message: result.msg });
+        }
+    } catch (error) {
+        console.log(error);
+        res.send({ status: false, message: error.msg });
+    }
+};
+const deleteEmployeeControllerFn = async (req, res) => {
+    try {
+        const employeeId = req.params.id; // Assuming the employeeId is passed as a route parameter
+
+        const result = await employeeService.deleteEmployeeDBService(employeeId);
+
+        if (result.status) {
+            res.send({ status: true, message: result.message });
+        } else {
+            res.send({ status: false, message: result.msg });
+        }
+    } catch (error) {
+        console.log(error);
+        res.send({ status: false, message: error.msg });
+    }
+};
+module.exports={createEmployeeControllerFn,loginUserControllerFn,getAllEmployeesControllerFn,deleteEmployeeControllerFn};

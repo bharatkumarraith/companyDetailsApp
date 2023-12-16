@@ -1,0 +1,84 @@
+var employeeModel= require('./employeeModel');
+
+var key="123456789trytrytyr";
+
+var encryptor = require('simple-encryptor')(key);
+
+
+
+module.exports.createEmployeeDBService = (employeeDetails) => {
+    return new Promise((resolve, reject) => {
+        var employeeModelData = new employeeModel();
+
+        employeeModelData.username = employeeDetails.username;
+        employeeModelData.email = employeeDetails.email;
+        employeeModelData.password = employeeDetails.password;
+        employeeModelData.dob = employeeDetails.dob;
+
+        var encrypted = encryptor.encrypt(employeeDetails.password);
+        employeeModelData.password = encrypted;
+
+        employeeModelData.save()
+            .then((result) => {
+                resolve(true);
+            })
+            .catch((error) => {
+                reject(false);
+            });
+    });
+};
+
+
+
+
+
+
+module.exports.loginEmployeeDBService = (employeeDetails) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            const result = await employeeModel.findOne({ email: employeeDetails.email });
+
+            if (!result) {
+                reject({ status: false, msg: "Invalid Employee Details" });
+                return;
+            }
+
+            const decrypted = encryptor.decrypt(result.password);
+
+            if (decrypted === employeeDetails.password) {
+                resolve({ status: true, msg: "Employee validated successfully" });
+            } else {
+                reject({ status: false, msg: "Password is incorrect" });
+            }
+        } catch (error) {
+            reject({ status: false, msg: "Invalid Data" });
+        }
+    });
+};
+
+
+
+module.exports.getAllEmployeesDBService = () => {
+    return new Promise((resolve, reject) => {
+        employeeModel.find({})
+            .then(employees => {
+                resolve({ status: true, employees });
+            })
+            .catch(error => {
+                reject({ status: false, msg: "Error fetching employees" });
+            });
+    });
+};
+
+
+module.exports.deleteEmployeeDBService = (employeeId) => {
+    return new Promise((resolve, reject) => {
+        employeeModel.findByIdAndDelete(employeeId)
+            .then(() => {
+                resolve({ status: true, message: "Employee deleted successfully" });
+            })
+            .catch(error => {
+                reject({ status: false, msg: "Error deleting employee" });
+            });
+    });
+};
