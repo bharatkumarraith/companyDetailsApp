@@ -1,0 +1,56 @@
+/* Navbar Styles */
+.navbar {
+    background-color: #007bff; /* Set your desired background color */
+  }
+  
+  .navbar-brand h5 {
+    margin: 0;
+    font-size: 1.5rem; /* Set your desired font size */
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-nav {
+    margin-left: auto;
+  }
+  
+  /* Icon Styles */
+  .navbar a.text-reset {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25rem; /* Set your desired font size */
+    margin-right: 15px; /* Adjust spacing between icons */
+  }
+  
+  .navbar a.text-reset:hover {
+    color: #fff; /* Set your desired hover color */
+  }
+  
+  /* Badge Styles */
+  .badge-notification {
+    font-size: 0.75rem; /* Set your desired font size */
+    position: relative;
+    top: -10px;
+  }
+  
+  /* Avatar Styles */
+  .dropdown-toggle img {
+    border-radius: 50%;
+  }
+  
+  /* Dropdown Menu Styles */
+  .dropdown-menu {
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  }
+  
+  .dropdown-menu a.dropdown-item {
+    color: #333;
+  }
+  
+  .dropdown-menu a.dropdown-item:hover {
+    background-color: #f8f9fa; /* Set your desired hover background color */
+  }
+  

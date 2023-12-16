@@ -1,0 +1,37 @@
+/* Footer Styles */
+footer {
+    background-color: #0b0b0e; /* Set your desired background color */
+    color: #fcfcfc; /* Set your desired text color */
+    padding: 20px 0;
+  }
+  
+  /* Container Styles */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Row Styles */
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Social Icon Styles */
+  .social-icon {
+    color: #d4bf19; /* Set your desired social icon color */
+    margin-right: 10px; /* Adjust spacing between social icons */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 767px) {
+    .row {
+      flex-direction: column;
+    }
+  
+    .col-md-6 {
+      margin-bottom: 15px;
+    }
+  }
+  
+  

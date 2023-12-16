@@ -1,0 +1,27 @@
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+
+section{
+    position: relative;
+    top:-200px;
+}
+
+img{
+    width: 450px;
+    position: relative;
+    bottom: -90px;
+}
+
+label{
+    color: rgb(255, 255, 1);
+}
+
+form{
+    position: relative;
+    top: -60px;
+}
