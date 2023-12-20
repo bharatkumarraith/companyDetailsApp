@@ -1,7 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
-
+    background: linear-gradient(180deg, #007986, #00BCB9);
     background-size: cover;
 background-repeat: no-repeat;
 height: 100%;

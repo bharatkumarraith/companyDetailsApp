@@ -168,3 +168,150 @@
     .links a{
     margin-left: 4px;
     }
+
+
+
+
+
+
+    /* newone */
+
+
+    .login-container {
+      width: 370px;
+      margin: 0 auto;
+      background-color:#1D2C4F;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 40px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-top: -220px;
+      border: none;
+      box-shadow: 
+      rgba(0, 0, 0, 0.09) 0px 2px 1px,
+      rgba(0, 0, 0, 0.09) 0px 4px 2px,
+      rgba(0, 0, 0, 0.09) 0px 8px 4px,
+      rgba(0, 0, 0, 0.09) 0px 16px 8px,
+      rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    
+
+
+    }
+    
+button{
+
+  background-color: #00F5E1;
+  width: 150px;
+  padding: 13px;
+  position: relative;
+  top:-50px;
+  right: -65px;
+  border: none;
+  cursor: pointer;
+}
+    
+    .login-form {
+      margin-top: 20px;
+    }
+    
+    .form-group {
+      margin-bottom: 15px;
+    }
+    
+    .form-label {
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+    }
+    
+    .form-input {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 1px solid gray;
+      border-radius: 4px;
+      background-color:#4D5974;
+      color: whitesmoke;
+    }
+  
+    
+    .form-checkbox {
+      margin-right: 5px;
+    }
+    
+    .login-btn {
+      background-color:  #00F5E1;
+      color: black;
+      padding: 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+     position: relative;
+     top:30px;
+     left: -4px;
+  width: 100%;
+    }
+    
+ 
+    
+    .forgot-password {
+  
+      color:  #00F5E1; 
+      text-decoration: none;
+      position: relative;
+      top:-85px;
+      right: -170px;
+      font-size: 12px;
+ 
+    }
+    
+    img{
+      width: 35%;
+position: relative;
+right: -93px;
+top:-10px;
+
+    }
+
+    #remember{
+      color:  #00F5E1;
+     
+      font-family: Arial, Helvetica, sans-serif;
+     font-size: 12px;
+     position: relative;
+     
+    }
+
+
+    .form-input::placeholder {
+      color: #94A0BB; 
+      position: relative;
+      right: -29px;
+    }
+
+
+
+    app-footer{
+      position: relative;
+      bottom: -50px;
+    }
+    #fa {
+      position: absolute;
+      margin: 12px; /* Adjust the margin as needed */
+      color: #94A0BB;/* Adjust the color of the icon */
+    }
+    
+    .form-group {
+      position: relative;
+    }
+    .fa {
+      font-size: 16px;
+      color: #94A0BB; /* Adjust the font size of the icon */
+    }
+
+    #faa{
+      position: absolute;
+      margin: 12px;
+      color: #94A0BB;
+    }
+   

@@ -11,6 +11,7 @@ import Swal from 'sweetalert2';
 export class EmployeeDetailsComponent implements OnInit, OnDestroy{
   page=1;
   totalPokemons: number | undefined; 
+  
   constructor(private userService:LoginService,private router: Router,private renderer: Renderer2){}
   ngOnDestroy(): void {
     

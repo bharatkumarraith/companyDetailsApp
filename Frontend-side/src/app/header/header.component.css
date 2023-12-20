@@ -1,8 +1,5 @@
 /* Navbar Styles */
-.navbar {
-    background-color: #007bff; /* Set your desired background color */
-  }
-  
+
   .navbar-brand h5 {
     margin: 0;
     font-size: 1.5rem; /* Set your desired font size */
@@ -53,4 +50,11 @@
   .dropdown-menu a.dropdown-item:hover {
     background-color: #f8f9fa; /* Set your desired hover background color */
   }
+  
+
+
+  /* newone */
+
+
+
   
