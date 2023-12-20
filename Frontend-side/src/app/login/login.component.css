@@ -46,6 +46,7 @@ button{
     
     .form-group {
       margin-bottom: 15px;
+     
     }
     
     .form-label {
@@ -55,7 +56,7 @@ button{
     }
     
     .form-input {
-      width: 100%;
+      width: 80%;
       padding: 10px;
       box-sizing: border-box;
       border: 1px solid gray;
@@ -65,10 +66,7 @@ button{
     }
   
     
-    .form-checkbox {
-      margin-right: 5px;
-    }
-    
+
     .login-btn {
       background-color:  #00F5E1;
       color: black;
@@ -133,6 +131,7 @@ top:-10px;
     
     .form-group {
       position: relative;
+      right: -20px;
     }
     .fa {
       font-size: 16px;
@@ -145,3 +144,18 @@ top:-10px;
       color: #94A0BB;
     }
    
+
+    #icon{
+       position: relative;
+       bottom: -15px;
+       border: 1px solid;
+       margin: 0px;
+       top:0px;
+       right:0px;
+       left:0px;
+       bottom:0px;
+       padding: 11px;
+       background-color:#4D5974;
+   
+       border: none;
+    }

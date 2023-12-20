@@ -1,21 +1,20 @@
 
-
 <div class="login-container">
-  <button routerLink="/signup">SIGN IN</button>
+  <button routerLink="/signup">SIGN UP</button>
   <div id="image">
     <img src="https://clipground.com/images/admin-logo-3.png">
   </div>
-  <form class="login-form"  (ngSubmit)="onSubmit()" [formGroup]="livestream">
-    <div class="form-group">
-      <span id="fa" class="fa fa-user"> |</span>
-      <input type="text" id="username" name="username" placeholder="username" class="form-input"formControlName="email">
+  <form class="login-form" (ngSubmit)="onSubmit()" [formGroup]="livestream">
+    <div class="form-group input-group">
+      <span id="icon" class="fa fa-user input-group-addon"></span>
+      <input type="text" id="username" name="username" placeholder="Username" class="form-input" formControlName="email">
+    </div>
+    <div class="form-group input-group">
+      <span id="icon" class="fa fa-lock input-group-addon"></span>
+      <input type="password" id="password" placeholder="Password" name="password" class="form-input" formControlName="password">
     </div>
     <div class="form-group">
-      <span id="faa" class="fa fa-lock"> |</span>
-      <input type="password" id="password" placeholder="password" name="password" class="form-input"formControlName="password">
-    </div>
-    <div class="form-group">
-   
+     
       <label id="remember" for="remember" class="form-label">Remember me</label>
     </div>
     <button id="" type="submit" class="login-btn">Login</button>
